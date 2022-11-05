@@ -17,6 +17,12 @@ public class Main {
         for (int i = 2; i < 7; i++) {
             MultithreadingExample myThreadLoop = new MultithreadingExample(i);
             myThreadLoop.start();
+            /*
+             * myThreadLoop.join(); <- this will make the program wait for this thread to
+             * finish before going forward
+             * myThreadLoop.isAlive(); <- this will check if thre thread is currently
+             * running
+             */
         }
 
         throw new RuntimeException();
