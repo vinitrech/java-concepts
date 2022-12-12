@@ -18,9 +18,12 @@ public class StreamApplication {
 
         List<Person> thirteenPlus = people.stream().filter(person -> person.getAge() > 12).sorted(Comparator.comparing(Person::getName)).toList();
 
-        thirteenPlus.stream().forEach(person -> {
+        thirteenPlus.stream().filter(person -> person.getName().length() > 5).toList().forEach((person -> {
             System.out.println(person.getName() + " - " + person.getAge());
-        });
+        }));
+
+        List<Person> thirteenBelow = people.stream().filter(person -> person.getAge() < 14).toList();
+        thirteenBelow.forEach(System.out::println); // Gets the toString method from the collection definition (Person)
     }
 
 
