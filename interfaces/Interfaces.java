@@ -1,15 +1,3 @@
-interface BlueColorBottleInterface {
-    String color = "Blue";
-
-    void fillUp();
-}
-
-interface BlueColorBottleInterfaceStatic {
-    static void pourOut() {
-        System.out.println("Pouring out!");
-    }
-}
-
 public class Interfaces implements BlueColorBottleInterface, BlueColorBottleInterfaceStatic {
     public static void main(String[] args) {
         System.out.println(color);
