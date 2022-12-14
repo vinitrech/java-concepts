@@ -18,9 +18,13 @@ public class StreamApplication {
 
         List<Person> thirteenPlus = people.stream().filter(person -> person.getAge() > 12).sorted(Comparator.comparing(Person::getName)).toList();
 
-
         // Streams are abstractions that focuses on the overall picture instead of each individual part
-        // It is great for readability and conciseness
+        // It is great for readability and conciseness since it uses a functional approach
+        // Mainly used with collections
+        // The stream() method creates a stream from the collection, meaning: stream is a
+        // sequence of elements from a collection that provides support for many kinds of
+        // aggregation functions, such as filter, map and collect.
+
         thirteenPlus.stream().filter(person -> person.getName().length() > 5).toList().forEach((person -> {
             System.out.println(person.getName() + " - " + person.getAge());
         }));
