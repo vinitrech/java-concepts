@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
         List<Integer> stack2 = new Stack<>();
-        stack2.add(1); // add actually calls the push() method from Stack
+        stack2.add(1); // add actually calls the pushs() method from Stack
 
         stack.push(1);
         stack.push(2);
