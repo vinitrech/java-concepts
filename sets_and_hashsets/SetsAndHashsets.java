@@ -1,7 +1,6 @@
-package setsAndHashsets;
+package sets_and_hashsets;
 
 import java.util.HashSet;
-import java.util.Set;
 
 public class SetsAndHashsets {
     public static void main(String[] args) {
